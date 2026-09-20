@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     class: DataTypes.STRING,
     semester: DataTypes.STRING,
     content_type: DataTypes.ENUM('text', 'pdf'),
-    content_url: DataTypes.TEXT
+    content_url: DataTypes.TEXT,
+    organization_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Note',

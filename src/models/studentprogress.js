@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      StudentProgress.belongsTo(models.Organization, { foreignKey: 'organization_id' });
     }
   }
   StudentProgress.init({
+    organization_id: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER,
     task_id: DataTypes.INTEGER,
     task_type: DataTypes.ENUM('quiz', 'coding'),
